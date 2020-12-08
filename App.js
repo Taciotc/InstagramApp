@@ -33,8 +33,11 @@ const AppRoutes = () => (
         cardStyle: { backgroundColor: "#fff" },
       }}
     >
+      <Auth.Screen name="SignIn" component={Login} />
+      <Auth.Screen name="SignUp" component={CreateAcounnt} />
       <Auth.Screen name="Feed do Instagram" component={Feed} />
       <Auth.Screen name="Comentários do Instagram" component={Comments} />
+
     </Auth.Navigator>
   </NavigationContainer>
 );
@@ -68,5 +71,5 @@ export default Routes = () => {
       </View>
     );
 
-  return user ? <AppRoutes /> : <AuthRoutes />;
+  return <AppRoutes />;
 };

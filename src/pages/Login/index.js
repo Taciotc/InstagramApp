@@ -21,7 +21,7 @@ import {
   CreateAccountButtonText,
 } from "./styled";
 
-import logo from "./../../../assets/instagram.png";
+import logo from "./../../../assets/instagram-1.png";
 
 export const Login = () => {
   const navigation = useNavigation();
@@ -52,7 +52,7 @@ export const Login = () => {
               onChangeText={(text) => console.log(text)}
             />
 
-            <Button colo="#fff">Entrar</Button>
+            <Button onPress={() => navigation.navigate("Feed do Instagram")} color="#fff">Entrar</Button>
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>

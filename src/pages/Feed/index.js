@@ -37,13 +37,17 @@ export const Feed = () => {
   const [refreshing, setRefreshing] = useState(false);
   const [text, setText] = useState("");
   const [comentarios, setComentarios] = useState([]);
-
+  const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
 
   const MAX_LENGTH = 250;
 
   const navigation = useNavigation();
 
+  async function getComments() {
+    const response = await api.get(`/feeds/${itemId}/comments`);
+    setComments(response.data);
+  }
   async function Like(postId) {
     const response = await api.post('/likes',
       {
@@ -127,6 +131,7 @@ export const Feed = () => {
 
   useEffect(() => {
     loadPage();
+    getComments();
   }, []);
 
   const renderItem = ({ item }) => {
@@ -234,4 +239,5 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: "rgba(212,211,211, 0.3)",
   },
-});
+})
+
