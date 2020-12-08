@@ -21,7 +21,7 @@ import {
   CreateAccountButtonText,
 } from "./styled";
 
-import logo from "./../../../assets/instagram-1.png";
+import logo from "./../../../assets/what.png";
 
 export const Login = () => {
   const navigation = useNavigation();
