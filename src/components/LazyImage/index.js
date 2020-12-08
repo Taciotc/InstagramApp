@@ -14,7 +14,7 @@ export default function LazyImage({
   const opacity = new Animated.Value(0);
 
   const [loaded, setLoaded] = useState(false);
-  
+
   useEffect(() => {
     if (shouldLoad) {
       setTimeout(() => {
@@ -27,25 +27,25 @@ export default function LazyImage({
     Animated.timing(opacity, {
       duration: 500,
       toValue: 1,
-      useNativeDriver: true, 
+      useNativeDriver: true,
     }).start();
   }
 
   return (
-    <Small 
+    <Small
       source={smallSource}
       aspect={aspectRatio}
       resizeMode="contain"
       blurRadius={3}>
       { loaded && (
-        <AnimatedOriginal 
+        <AnimatedOriginal
           style={{ opacity }}
           onLoadEnd={handleAnimate}
-          source={source} 
-          aspect={aspectRatio} 
+          source={source}
+          aspect={aspectRatio}
           resizeMode="contain"
         />
-      ) }
+      )}
     </Small>
   );
 }
