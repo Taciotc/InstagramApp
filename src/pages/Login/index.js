@@ -2,6 +2,7 @@ import React from "react";
 import {
   View,
   Image,
+  Text,
   ScrollView,
   KeyboardAvoidingView,
   Platform,
@@ -21,7 +22,7 @@ import {
   CreateAccountButtonText,
 } from "./styled";
 
-import logo from "./../../../assets/instagram-1.png";
+import logo from "./../../../assets/what.png";
 
 export const Login = () => {
   const navigation = useNavigation();
@@ -52,7 +53,7 @@ export const Login = () => {
               onChangeText={(text) => console.log(text)}
             />
 
-            <Button onPress={() => navigation.navigate("Feed do Instagram")} color="#fff">Entrar</Button>
+            <Button onPress={() => navigation.navigate("Feed do Instagram")} color="#fff"><Text style={{ color: "#000" }}>Entrar</Text></Button>
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>

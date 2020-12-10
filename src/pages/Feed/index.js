@@ -11,7 +11,7 @@ import {
 import axios from "axios";
 import LazyImage from "../../components/LazyImage";
 import { AsyncStorage } from "react-native";
-
+import Coment from "../../components/Coment"
 import { AntDesign } from "@expo/vector-icons";
 
 import { useNavigation } from "@react-navigation/native";
@@ -170,6 +170,9 @@ export const Feed = () => {
         <Description style={{ flexDirection: "column" }}>
           <Name>{item?.description}</Name>
         </Description>
+
+        <Coment feed={item.id} />
+
         {/* {comentarios.map((comentario) => {
           return (
             <Description style={{ flexDirection: "column" }}>
