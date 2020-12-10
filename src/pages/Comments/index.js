@@ -21,7 +21,7 @@ export const Comments = ({ route, navigation }) => {
   async function Comment() {
     const response = await api.post(`/feeds/${itemId}/comments`,
       {
-        "name": "SALVO",
+        "name": "Comentario Salvo",
         "comment": comentario
       }
     )
