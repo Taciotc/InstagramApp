@@ -2,6 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import { Text, Avatar, Card, IconButton, Paragraph, Title, Button, TextInput } from "react-native-paper";
 import { api } from "../../services/api";
+import icon from 'react-native-vector-icons/FontAwesome';
 
 
 export const Comments = ({ route, navigation }) => {
@@ -21,7 +22,8 @@ export const Comments = ({ route, navigation }) => {
   async function Comment() {
     const response = await api.post(`/feeds/${itemId}/comments`,
       {
-        "name": "SALVO",
+        "name": "Comentario Salvo:",
+
         "comment": comentario
       }
     )

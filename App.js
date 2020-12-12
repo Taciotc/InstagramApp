@@ -54,7 +54,7 @@ export default Routes = () => {
           await Updates.reloadAsync();
         }
       } catch (e) {
-        alert("Não foi possivel atualizar seu aplicativo");
+
       }
     }
 
